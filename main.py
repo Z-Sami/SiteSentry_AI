@@ -1,30 +1,24 @@
+import os
 from google import genai
+from dotenv import load_dotenv # 1. Import the loader
 
-# Your verified working key
-API_KEY = "AIzaSyBetTv86zaTGNbcxINPARXAmb5-wIW3Nt4"
+# 2. Load the variables from the .env file
+load_dotenv()
 
-# Initialize client
-client = genai.Client(api_key=API_KEY)
+# 3. Get the key from the environment variable
+api_key = os.getenv("GEMINI_API_KEY")
 
+# 4. Setup the Client using the variable
+client = genai.Client(api_key=api_key)
 
-# Professional English comments for SiteSentry logic
-def run_sitesentry_check():
-    try:
-        # Using the model that worked for you: gemini-3-flash-preview
-        response = client.models.generate_content(
-            model="gemini-3-flash-preview",
-            contents="Confirm your role as SiteSentry AI and give me a tip for wall inspection.",
-            config={
-                'system_instruction': "You are the AI brain of SiteSentry, a construction inspection robot. Be technical and precise."
-            }
-        )
-
-        print("--- Robot Status ---")
-        print(response.text)
-
-    except Exception as e:
-        print(f"Error: {e}")
-
+def test_connection():
+    print("Connecting to Gemini AI using hidden key...")
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents="Hello Gemini! This is Sami. Confirm if the system is ready."
+    )
+    print("\n--- AI RESPONSE ---")
+    print(response.text)
 
 if __name__ == "__main__":
-    run_sitesentry_check()
+    test_connection()
