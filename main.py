@@ -14,7 +14,7 @@ client = genai.Client(api_key=api_key)
 def test_connection():
     print("Connecting to Gemini AI using hidden key...")
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+       model="gemini-2.0-flash",
         contents="Hello Gemini! This is Sami. Confirm if the system is ready."
     )
     print("\n--- AI RESPONSE ---")
