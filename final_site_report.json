@@ -1,39 +1,9 @@
 {
     "summary": {
-        "total_targets": 3,
-        "completed": 1,
-        "timestamp": "Sun Apr 12 21:38:25 2026"
+        "project_name": "SiteSentry_Inspection",
+        "total_targets": 0,
+        "completed": 0,
+        "timestamp": "Thu Apr 16 16:09:19 2026"
     },
-    "details": [
-        {
-            "id": "Socket_1",
-            "target_coords": {
-                "x": 10.0,
-                "y": 10.0
-            },
-            "status": "Verified",
-            "tilt_degrees": 0.8,
-            "ai_report": "Socket found and verified by AI."
-        },
-        {
-            "id": "Socket_2",
-            "target_coords": {
-                "x": 50.0,
-                "y": 10.0
-            },
-            "status": "Missed (Out of Range)",
-            "tilt_degrees": 0.0,
-            "ai_report": "Robot was too far (40.0m) to scan."
-        },
-        {
-            "id": "Socket_3",
-            "target_coords": {
-                "x": 100.0,
-                "y": 30.0
-            },
-            "status": "Missed (Out of Range)",
-            "tilt_degrees": 0.0,
-            "ai_report": "Robot was too far (90.0m) to scan."
-        }
-    ]
+    "details": []
 }
