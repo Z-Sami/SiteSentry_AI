@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="rosserial_python" type="serial_node.py" name="arduino_bridge" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="57600"/>
+  </node>
+
+  <node pkg="site_sentry_control" type="kinematics_node.py" name="kinematics_node" output="screen" />
+
+  <node pkg="rplidar_ros" type="rplidarNode" name="rplidarNode" output="screen">
+    <param name="serial_port" value="/dev/ttyUSB0"/>
+    <param name="frame_id" value="laser"/>
+  </node>
+</launch>
