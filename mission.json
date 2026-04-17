@@ -1,5 +1,4 @@
-{
-    "project": "SiteSentry_Inspection",
-    "path_waypoints": [],
-    "targets": []
-}
+[
+    {"x": 1.5, "y": 2.0},
+    {"x": 4.0, "y": -1.2}
+]
