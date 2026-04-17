@@ -4,3 +4,4 @@ __pycache__/
 *.json
 venv_linux/
 chat_id.txt
+.idea/

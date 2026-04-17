@@ -1,9 +1,17 @@
 import socket
 import json
 import threading
+import os
+from dotenv import load_dotenv
+
+# تحميل الإعدادات المركزية
+load_dotenv()
+DEFAULT_IP = os.getenv("BRAIN_IP", "127.0.0.1")
+DEFAULT_PORT = int(os.getenv("BRAIN_PORT", 5006))
 
 class LidarReceiver:
-    def __init__(self, host='127.0.0.1', port=5005):
+    # نغير القيم الافتراضية هنا
+    def __init__(self, host=DEFAULT_IP, port=DEFAULT_PORT):
         self.host = host
         self.port = port
          
