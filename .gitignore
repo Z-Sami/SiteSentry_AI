@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.jpg
+*.json
+venv_linux/
+chat_id.txt
