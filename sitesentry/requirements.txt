@@ -1,0 +1,36 @@
+# SiteSentry Python Dependencies
+# ==============================
+# Install with: pip install -r requirements.txt
+
+# CAD/DXF Parsing
+ezdxf==1.4.3
+
+# AI Vision API
+groq==0.1.2
+# Note: Verify Groq model availability at https://console.groq.com/docs/models
+
+# Computer Vision
+opencv-python==4.8.1.78
+
+# PDF Report Generation
+reportlab==4.0.7
+
+# Telegram Bot Interface
+python-telegram-bot==20.7
+
+# Serial Communication (Arduino)
+pyserial==3.5
+
+# ROS Dependencies (install separately via rosdep)
+# rospy
+# std_msgs
+# geometry_msgs
+# nav_msgs
+# move_base_msgs
+# tf
+# actionlib
+
+# Optional: Development Tools
+# pytest==7.4.3
+# black==23.11.0
+# pylint==3.0.3

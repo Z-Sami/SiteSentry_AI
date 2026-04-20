@@ -1,0 +1,70 @@
+# SiteSentry move_base Costmap Configuration
+# ============================================
+# Parameters for local and global costmaps used by move_base
+
+# Global and Local costmap common parameters (loaded by both namespaces)
+
+# Costmap resolution (m/cell)
+resolution: 0.05
+
+# Costmap size
+width: 100
+height: 100
+
+# Origin offset (usually center of costmap)
+origin_x: -5.0
+origin_y: -5.0
+
+# Inflation layer (marks obstacles with buffer)
+inflation_radius: 0.55 # Robot safety radius
+cost_scaling_factor: 10.0 # Exponential decay factor
+
+# Obstacle layer (from lidar)
+obstacle_layer:
+  enabled: true
+  obstacle_range: 2.5
+  raytrace_range: 3.0
+  max_obstacle_height: 0.8
+  min_obstacle_height: 0.0
+  combination_method: 1 # Max combining method
+  track_unknown_space: true
+  unknown_cost_value: 128
+  mark_threshold: 0
+  clearing_threshold: 50
+  decay_model: 0
+
+# Static map layer (from map_server)
+static_layer:
+  enabled: true
+  map_topic: /map
+  unknown_cost_value: 0
+  trinary_costmap: true
+  track_unknown_space: true
+
+# Voxel layer parameters (3D obstacle space)
+voxel_layer:
+  enabled: false # Disabled for 2D navigation
+  max_obstacle_height: 0.5
+  z_resolution: 0.1
+  unknown_threshold: 15
+  mark_threshold: 0
+  decay_model: 0
+  decay_param: 0.0
+
+# Lethal cost threshold (above this is impassable)
+lethal_cost_threshold: 100
+
+# Update frequency (Hz)
+update_frequency: 5.0
+publish_frequency: 2.0
+
+# Plugins (specify layer types and order)
+# Global costmap specific
+plugins:
+  - { name: static_layer, type: "costmap_2d::StaticLayer" }
+  - { name: inflation_layer, type: "costmap_2d::InflationLayer" }
+
+# Local costmap specific (for local planning)
+local_plugins:
+  - { name: obstacle_layer, type: "costmap_2d::ObstacleLayer" }
+  - { name: inflation_layer, type: "costmap_2d::InflationLayer" }

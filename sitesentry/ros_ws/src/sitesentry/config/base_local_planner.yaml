@@ -1,0 +1,46 @@
+# SiteSentry Base Local Planner Configuration
+# ==============================================
+# TrajectoryPlannerROS parameters for smooth local path planning
+
+# Robot dimensions
+max_vel_x: 0.5 # Max forward velocity (m/s)
+min_vel_x: 0.1 # Min forward velocity (m/s)
+max_vel_theta: 1.0 # Max angular velocity (rad/s)
+min_vel_theta: -1.0
+min_in_place_vel_theta: 0.2
+
+# Acceleration limits (for smooth motion)
+acc_lim_x: 1.0 # Linear acceleration limit (m/s²)
+acc_lim_theta: 2.0 # Angular acceleration limit (rad/s²)
+
+# Goal tolerance
+xy_goal_tolerance: 0.1 # Distance to goal (m)
+yaw_goal_tolerance: 0.05 # Angle to goal (radians)
+goal_dist_tolerance: 0.1
+latch_xy_goal_tolerance: false
+
+# Forward simulation parameters
+sim_time: 1.7 # Prediction horizon (s)
+sim_granularity: 0.025 # Simulation granularity (m)
+angular_sim_granularity: 0.025 # Angular granularity (rad)
+
+# Scoring parameters
+path_distance_bias: 32.0 # Weight of distance along path
+goal_distance_bias: 24.0 # Weight of distance to goal
+occdist_scale: 0.02 # Weight of obstacle distance
+
+# Velocity scaling
+dwa: true # Use DWA (Dynamic Window Approach)
+
+# Oscillation prevention
+oscillation_reset_dist: 0.05
+oscillation_reset_angle: 0.2
+
+# Robot footprint (square 0.35m × 0.35m)
+footprint_model:
+  type: "polygon"
+  radius: 0.175 # Half of 0.35m
+
+# Stopping model
+stop_time_buffer: 0.2 # Time to stop
+max_vel_x_backwards: 0.2 # Max backward speed
