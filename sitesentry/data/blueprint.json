@@ -1,0 +1,128 @@
+{
+  "project": "Example Construction Site",
+  "date": "2026-04-20",
+  "sockets": [
+    {
+      "id": "S1",
+      "room": "R1",
+      "x": 1.0,
+      "y": 0.5,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S2",
+      "room": "R1",
+      "x": 2.5,
+      "y": 0.5,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S3",
+      "room": "R1",
+      "x": 4.0,
+      "y": 0.5,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S4",
+      "room": "R1",
+      "x": 1.0,
+      "y": 4.0,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S5",
+      "room": "R1",
+      "x": 4.0,
+      "y": 4.0,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S6",
+      "room": "R2",
+      "x": 6.5,
+      "y": 1.0,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S7",
+      "room": "R2",
+      "x": 6.5,
+      "y": 3.5,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S8",
+      "room": "R2",
+      "x": 8.0,
+      "y": 1.0,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S9",
+      "room": "R2",
+      "x": 8.0,
+      "y": 3.5,
+      "height": 1.5,
+      "type": "15A-125V"
+    },
+    {
+      "id": "S10",
+      "room": "R2",
+      "x": 9.5,
+      "y": 2.25,
+      "height": 1.5,
+      "type": "15A-125V"
+    }
+  ],
+  "walls": [
+    {
+      "id": "W1",
+      "room": "R1",
+      "start": [0.0, 0.0],
+      "end": [5.0, 0.0],
+      "type": "exterior"
+    },
+    {
+      "id": "W2",
+      "room": "R1",
+      "start": [5.0, 0.0],
+      "end": [5.0, 4.5],
+      "type": "interior"
+    },
+    {
+      "id": "W3",
+      "room": "R1",
+      "start": [5.0, 4.5],
+      "end": [0.0, 4.5],
+      "type": "interior"
+    },
+    {
+      "id": "W4",
+      "room": "R1",
+      "start": [0.0, 4.5],
+      "end": [0.0, 0.0],
+      "type": "exterior"
+    }
+  ],
+  "room_areas": [
+    {
+      "id": "R1",
+      "name": "Living Room",
+      "area": 22.5
+    },
+    {
+      "id": "R2",
+      "name": "Kitchen",
+      "area": 18.0
+    }
+  ]
+}

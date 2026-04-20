@@ -1,0 +1,27 @@
+{
+  "mission": "SiteSentry ArUco Localization Markers",
+  "marker_size_cm": 10,
+  "markers": [
+    {
+      "id": 0,
+      "x": 5.0,
+      "y": 2.25,
+      "theta": 0.0,
+      "location": "Room R1 to R2 boundary"
+    },
+    {
+      "id": 1,
+      "x": 0.0,
+      "y": 0.0,
+      "theta": 0.0,
+      "location": "Room R1 corner"
+    },
+    {
+      "id": 2,
+      "x": 10.0,
+      "y": 4.5,
+      "theta": 0.0,
+      "location": "Room R2 corner"
+    }
+  ]
+}

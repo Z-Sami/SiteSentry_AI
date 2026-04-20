@@ -1,0 +1,30 @@
+[2026-04-20 21:58:46] INFO - SiteSentry - SiteSentry started - Log: /home/zeus/SiteSentry_AI/sitesentry/logs/sitesentry_20260420_215846.log
+[2026-04-20 21:58:46] INFO - SiteSentry - Initializing hardware...
+[2026-04-20 21:58:46] INFO - MotorController - Motor controller in SIMULATE mode
+[2026-04-20 21:58:46] INFO - IMUSensor - IMU sensor in SIMULATE mode
+[2026-04-20 21:58:46] INFO - UltrasonicSensor(lower) - Ultrasonic sensor lower in SIMULATE mode
+[2026-04-20 21:58:46] INFO - UltrasonicSensor(upper) - Ultrasonic sensor upper in SIMULATE mode
+[2026-04-20 21:58:46] INFO - LidarHandler - LiDAR in SIMULATE mode
+[2026-04-20 21:58:46] INFO - LidarHandler - LiDAR scanning started (simulated)
+[2026-04-20 21:58:46] INFO - CameraHandler - Camera in SIMULATE mode
+[2026-04-20 21:58:46] INFO - SiteSentry - Hardware initialization complete
+[2026-04-20 21:58:46] INFO - SiteSentry - Initializing software modules...
+[2026-04-20 21:58:46] INFO - SLAMHandler - SLAM initialized: 100x100 cells @ 0.05m resolution
+[2026-04-20 21:58:46] INFO - ArucoHandler - Loaded 3 marker positions
+[2026-04-20 21:58:46] INFO - ArucoHandler - ArUco handler in SIMULATE mode
+[2026-04-20 21:58:46] INFO - PathPlanner - Loaded 23 waypoints
+[2026-04-20 21:58:46] INFO - SocketInspector - Loaded 10 blueprint sockets
+[2026-04-20 21:58:46] INFO - SocketInspector - Socket inspector in SIMULATE mode
+[2026-04-20 21:58:46] INFO - DatabaseHandler - Database initialized: /home/zeus/SiteSentry_AI/sitesentry/data/sitesentry.db
+[2026-04-20 21:58:46] INFO - TelegramHandler - Telegram handler initialized
+[2026-04-20 21:58:46] INFO - SyncManager - Sync manager started
+[2026-04-20 21:58:46] INFO - SiteSentry - Software initialization complete
+[2026-04-20 21:58:46] INFO - SiteSentry - DRY RUN MODE - No actual movement or data collection
+[2026-04-20 21:58:46] INFO - SiteSentry - Waypoints: 23
+[2026-04-20 21:58:46] INFO - SiteSentry - Cleaning up resources...
+[2026-04-20 21:58:51] INFO - SyncManager - Sync manager stopped
+[2026-04-20 21:58:51] INFO - LidarHandler - LiDAR scanning stopped
+[2026-04-20 21:58:51] INFO - DatabaseHandler - Database closed
+[2026-04-20 21:58:51] INFO - SiteSentry - Cleanup complete
+[2026-04-20 21:58:51] INFO - SiteSentry - SiteSentry terminated with exit code 0
+[2026-04-20 21:58:51] INFO - LidarHandler - LiDAR scanning stopped
