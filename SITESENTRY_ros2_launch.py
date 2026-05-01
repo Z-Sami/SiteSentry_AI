@@ -13,7 +13,7 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     
-    config_dir = FindPackageShare(package='sitesentry_bringup').find('sitesentry_bringup')
+    config_dir = '/root/SiteSentry_Project'
     
     return LaunchDescription([
         
@@ -129,7 +129,20 @@ def generate_launch_description():
                 'port': 9090,
             }],
         ),
-        
+        # ========== LIDAR OBSTACLE AVOIDANCE ==========
+        Node(
+            package='sitesentry_lidar',
+            executable='obstacle_avoidance',
+            name='lidar_obstacle_avoidance',
+            output='screen',
+            parameters=[{
+                'critical_distance': 0.15,
+                'warning_distance': 0.30,
+                'safe_distance': 0.50,
+                'max_linear_speed': 0.5,
+                'max_angular_speed': 2.0,
+            }],
+        ),
         # ========== TELEGRAM BOT NODE ==========
         Node(
             package='sitesentry_teleop',
@@ -159,14 +172,7 @@ def generate_launch_description():
             output='screen',
         ),
         
-        # ========== RVIZ2 (3D Visualization) ==========
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            name='rviz2',
-            arguments=['-d', PathJoinSubstitution([config_dir, 'rviz', 'sitesentry.rviz'])],
-            output='screen',
-        ),
+        
     ])
 
 

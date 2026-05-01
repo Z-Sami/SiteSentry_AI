@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  ros2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ros2_robot
+    network_mode: host
+    
+    environment:
+      - ROS_DOMAIN_ID=1
+      - ROS_LOCALHOST_ONLY=0
+      - PYTHONUNBUFFERED=1
+    
+    # هدول السطرين السحريات عشان نجبره يضل صاحي وما يطفي أبداً
+    entrypoint: /bin/bash
+    command: -c "tail -f /dev/null"
+    
+    restart: unless-stopped
